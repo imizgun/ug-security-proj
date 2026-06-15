@@ -1,0 +1,28 @@
+# ── .NET / ASP.NET Core ──────────────────────────────────────────────────────
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.DotSettings.user
+TestResults/
+
+# ── Angular / Node ───────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+.docker/
+
+# ── Secrets / env ────────────────────────────────────────────────────────────
+.env
+.env.*
+appsettings.Production.json
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ──────────────────────────────────────────────────────────────────────
+.idea/
+*.swp
