@@ -56,5 +56,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Pull base images (with retry)
+        run: |
+          for image in mcr.microsoft.com/dotnet/sdk:10.0 mcr.microsoft.com/dotnet/aspnet:10.0; do
+            for i in 1 2 3; do
+              docker pull $image && break
+              echo "Attempt $i failed, retrying in 15s..."
+              sleep 15
+            done
+          done
+
       - name: Build images
-        run: docker compose build
+        run: docker compose build --pull=false
