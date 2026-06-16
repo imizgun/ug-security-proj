@@ -1,6 +1,6 @@
 # UgSocial
 
-**Autor:** Mikhail Marasanov
+**Autor:** Mikhail Marasanov, grupa 4
 
 Miniaturowy serwis społecznościowy zabezpieczony OAuth 2.0 (Authorization Code + PKCE).
 
